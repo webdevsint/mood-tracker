@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+span {
+  text-decoration: underline;
+  text-decoration-color: palevioletred;
+}
+
+.checkbox-container {
+  flex-direction: row;
+  padding: 1rem;
+  justify-items: space-evenly;
+}
+
+.checkbox-container label {
+  margin: 0 0.5rem;
+}
+
+.checkbox-container input {
+  accent-color: palevioletred;
+}
+
+.log-container {
+  margin: 1.75rem 0;
+  display: none;
+}
+
+textarea {
+  height: 200px;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.submit {
+  background: palevioletred;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: rgb(209, 81, 124);
+}
+
+@media screen and (max-width: 605px) {
+  .container {
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+}

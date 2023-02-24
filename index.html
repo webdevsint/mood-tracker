@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>How are we feeling <span>today?</span></h1>
+
+        <div class="checkbox-container">
+
+            <label>
+                <input type="checkbox" id="vsad" onchange="submitCheckBox('Very sad')">
+                Very sad
+            </label>
+
+            <label>
+                <input type="checkbox" id="sad" onchange="submitCheckBox('Sad')">
+                Sad
+            </label>
+
+            <label>
+                <input type="checkbox" id="neutral" onchange="submitCheckBox('Neutral')">
+                Neutral
+            </label>
+
+            <label>
+                <input type="checkbox" id="happy" onchange="submitCheckBox('Happy')">
+                Happy
+            </label>
+
+            <label>
+                <input type="checkbox" id="vhappy" onchange="submitCheckBox('Very happy')">
+                Very happy
+            </label>
+
+            <label>
+                <input type="checkbox" id="angry" onchange="submitCheckBox('Angry')">
+                Angry
+            </label>
+        </div>
+
+        <div class="log-container">
+            <h1>You wanna talk about it?</h1>
+            <textarea id="text" placeholder="Type something..."></textarea>
+
+            <button class="submit" onclick="submit()">I'm done!</button>
+        </div>
+
+    </div>
+    
+    <script src="./scripts/localdb.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
