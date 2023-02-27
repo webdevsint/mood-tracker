@@ -15,6 +15,10 @@
   flex-direction: column;
 }
 
+a {
+  color: palevioletred;
+}
+
 span {
   text-decoration: underline;
   text-decoration-color: palevioletred;
@@ -63,6 +67,17 @@ textarea {
 
 .submit:hover {
   background: rgb(209, 81, 124);
+}
+
+.alert {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  background: white;
+  display: none;
 }
 
 @media screen and (max-width: 605px) {
