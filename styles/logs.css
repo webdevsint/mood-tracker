@@ -21,17 +21,30 @@ span {
 }
 
 .log {
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 2px solid black;
-    border-radius: 4px;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
 .date {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .mood {
-    margin: 10px 0;
-    font-size: 20px;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+a {
+  color: palevioletred;
+}
+
+.alert {
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  background: white;
+  width: max-content;
+  display: none;
 }

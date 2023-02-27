@@ -44,8 +44,7 @@ if (dailyLog.length > 0) {
       container.appendChild(logDiv);
     });
   } else {
-    const container = document.querySelector(".log-container");
-    container.innerHTML = "No entries found!";
+    document.querySelector(".alert").getElementsByClassName.display = 'block';
   }
 } else {
   location.replace("/index.html");
