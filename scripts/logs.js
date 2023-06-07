@@ -6,7 +6,7 @@ const data = db.storage().sort(function (x, y) {
 
 const today = new Date();
 const yyyy = today.getFullYear();
-let mm = today.getMonth() + 1; // Months start at 0!
+let mm = today.getMonth() + 1;
 let dd = today.getDate();
 
 if (dd < 10) dd = "0" + dd;
@@ -16,36 +16,44 @@ const formattedToday = dd + "/" + mm + "/" + yyyy;
 
 const dailyLog = data.filter((item) => item.date === formattedToday);
 
-if (dailyLog.length > 0) {
-  if (data.length > 0) {
-    data.reverse().forEach((item) => {
-      const container = document.querySelector(".log-container");
+if (dailyLog.length === 0) {
+  document.querySelector(
+    ".alert"
+  ).innerHTML = `Daily entry not added! <a href="/">Add now</a>`;
+  document.querySelector(".alert").style.display = "block";
+}
 
-      const logDiv = document.createElement("div");
-      logDiv.className = "log";
+if (data.length === 0) {
+  document.querySelector(
+    ".alert"
+  ).innerHTML = `No entries found! <a href="/">Create one</a>`;
+  document.querySelector(".alert").style.display = "block";
+}
 
-      const logDate = document.createElement("div");
-      logDate.className = "date";
+if (data.length > 0) {
+  data.reverse().forEach((item) => {
+    const container = document.querySelector(".log-container");
 
-      const logMood = document.createElement("div");
-      logMood.className = "mood";
+    const logDiv = document.createElement("div");
+    logDiv.className = "log";
 
-      const logText = document.createElement("div");
-      logText.className = "log-text";
+    const logDate = document.createElement("div");
+    logDate.className = "date";
 
-      logDate.innerHTML = item.date;
-      logMood.innerHTML = `Mood: <span>${item.mood}</span>`;
-      logText.innerHTML = item.log;
+    const logMood = document.createElement("div");
+    logMood.className = "mood";
 
-      logDiv.appendChild(logDate);
-      logDiv.appendChild(logMood);
-      logDiv.appendChild(logText);
+    const logText = document.createElement("div");
+    logText.className = "log-text";
 
-      container.appendChild(logDiv);
-    });
-  } else {
-    document.querySelector(".alert").style.display = 'block';
-  }
-} else {
-  document.querySelector(".alert").style.display = 'block';
+    logDate.innerHTML = item.date;
+    logMood.innerHTML = `Mood: <span>${item.mood}</span>`;
+    logText.innerHTML = item.log;
+
+    logDiv.appendChild(logDate);
+    logDiv.appendChild(logMood);
+    logDiv.appendChild(logText);
+
+    container.appendChild(logDiv);
+  });
 }
