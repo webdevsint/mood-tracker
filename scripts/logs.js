@@ -14,7 +14,7 @@ if (mm < 10) mm = "0" + mm;
 
 const formattedToday = dd + "/" + mm + "/" + yyyy;
 
-const dailyLog = data.filter((item) => item.date === formattedToday);
+let dailyLog = data.filter((item) => item.date === formattedToday);
 
 if (dailyLog.length === 0) {
   document.querySelector(
@@ -56,4 +56,48 @@ if (data.length > 0) {
 
     container.appendChild(logDiv);
   });
+}
+
+function filter(date) {
+  document.querySelector(".filtered-log").innerHTML = "";
+  document.querySelector(".alert").style.display = "none";
+
+  if (date === "") {
+    alert("Please select a date first!");
+  } else {
+    const formattedDate = `${date.split("-")[2]}/${date.split("-")[1]}/${
+      date.split("-")[0]
+    }`;
+
+    dailyLog = data.filter((item) => item.date === formattedDate);
+
+    if (dailyLog.length === 0) {
+      document.querySelector(".alert").innerHTML = `No entry found!`;
+      document.querySelector(".alert").style.display = "block";
+    } else {
+      const container = document.querySelector(".filtered-log");
+
+      const logDiv = document.createElement("div");
+      logDiv.className = "log";
+
+      const logDate = document.createElement("div");
+      logDate.className = "date";
+
+      const logMood = document.createElement("div");
+      logMood.className = "mood";
+
+      const logText = document.createElement("div");
+      logText.className = "log-text";
+
+      logDate.innerHTML = dailyLog[0].date;
+      logMood.innerHTML = `Mood: <span>${dailyLog[0].mood}</span>`;
+      logText.innerHTML = dailyLog[0].log;
+
+      logDiv.appendChild(logDate);
+      logDiv.appendChild(logMood);
+      logDiv.appendChild(logText);
+
+      container.appendChild(logDiv);
+    }
+  }
 }

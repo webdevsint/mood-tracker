@@ -47,4 +47,14 @@ a {
   background: white;
   width: max-content;
   display: none;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0 4px;
+  outline: none;
+}
+
+button {
+  padding: 1px 4px;
 }

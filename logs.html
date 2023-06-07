@@ -19,6 +19,9 @@
     <meta property="twitter:description" content="A decentralized mood tracker app built on localstorage.">
     <meta property="twitter:image" content="./assets/cover.png">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <link rel="stylesheet" href="./styles/logs.css">
 </head>
 
@@ -28,9 +31,19 @@
 
         <div class="log-container">
             <div class="alert"></div>
+
+            <div class="filtered-log"></div>
+
+            <div class="input-container">
+                <label for="date-input">Filter by date:</label>
+                <input type="date" name="date-input" onkeypress="return false" id="date">
+                <button onclick="filter(document.getElementById('date').value)">Filter</button>
+            </div>
+
+            <hr style="margin-top: 1rem;">
+
         </div>
     </div>
-
 
     <script src="./scripts/localdb.js"></script>
     <script src="./scripts/logs.js"></script>
