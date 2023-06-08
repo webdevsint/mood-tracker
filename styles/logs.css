@@ -37,7 +37,11 @@ span {
 }
 
 a {
-  color: palevioletred;
+  color: black;
+}
+
+h1 a {
+  text-decoration: none;
 }
 
 .alert {
@@ -50,11 +54,20 @@ a {
   margin-bottom: 1rem;
 }
 
-input {
-  padding: 0 4px;
-  outline: none;
+.alert a {
+  color: palevioletred;
 }
 
+input,
 button {
-  padding: 1px 4px;
+  padding: 2px 4px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 30px;
+  background: white;
+}
+
+hr {
+  border: 1px solid black;
 }

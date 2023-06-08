@@ -19,33 +19,36 @@
     <meta property="twitter:description" content="A decentralized mood tracker app built on localstorage.">
     <meta property="twitter:image" content="./assets/cover.png">
 
-    <link rel="stylesheet" href="./styles/logs.css">
+    <link rel="stylesheet" href="./styles/backup.css">
 </head>
 
 <body>
     <div class="container">
         <h1><a href="/">Mood <span>Logs</span></a></h1>
 
-        <div class="log-container">
-            <div class="alert"></div>
+        <main>
 
-            <div class="filtered-log"></div>
+            <a class="backup-btn" onclick="backupHandler()">
+                <div class="backup">
+                    <h2>Backup</h2>
+                </div>
+            </a>
 
-            <div class="input-container">
-                <label for="date-input">Filter by date:</label>
-                <input type="date" name="date-input" onkeypress="return false" id="date">
-                <button onclick="filter(document.getElementById('date').value)">Filter</button>
-            </div>
+            <hr>
 
-            <hr style="margin-top: 1rem;">
+            <label for="file-reader">
+                <div class="restore">
+                    <h2>Restore</h2>
+                </div>
 
-        </div>
+                <input type="file" id="file-reader" onchange="readJSON(this.files[0])">
+            </label>
 
-        <a href="/backup.html">Backup and Restore.</a>
+        </main>
     </div>
 
     <script src="./scripts/localdb.js"></script>
-    <script src="./scripts/logs.js"></script>
+    <script src="./scripts/backup.js"></script>
 </body>
 
 </html>

@@ -63,7 +63,8 @@ function filter(date) {
   document.querySelector(".alert").style.display = "none";
 
   if (date === "") {
-    alert("Please select a date first!");
+    document.querySelector(".alert").innerHTML = `Please select a date first!`;
+    document.querySelector(".alert").style.display = "block";
   } else {
     const formattedDate = `${date.split("-")[2]}/${date.split("-")[1]}/${
       date.split("-")[0]
@@ -72,7 +73,9 @@ function filter(date) {
     dailyLog = data.filter((item) => item.date === formattedDate);
 
     if (dailyLog.length === 0) {
-      document.querySelector(".alert").innerHTML = `No entry found!`;
+      document.querySelector(
+        ".alert"
+      ).innerHTML = `No log found for ${formattedDate}`;
       document.querySelector(".alert").style.display = "block";
     } else {
       const container = document.querySelector(".filtered-log");

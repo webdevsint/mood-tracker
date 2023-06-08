@@ -17,11 +17,11 @@ const formattedToday = dd + "/" + mm + "/" + yyyy;
 const dailyLog = data.filter((item) => item.date === formattedToday);
 
 if (dailyLog.length === 1) {
-  document.querySelector('.alert').style.display = 'block';
+  document.querySelector(".alert").style.display = "block";
 
-  ['sad', 'vsad', 'neutral', 'happy', 'vhappy', 'angry'].forEach(id => {
+  ["sad", "vsad", "neutral", "happy", "vhappy", "angry"].forEach((id) => {
     document.getElementById(id).disabled = true;
-  })
+  });
 }
 
 function submitCheckBox(mood) {
