@@ -48,7 +48,7 @@ function readJSON(file) {
         });
       });
 
-      location.replace("/logs");
+      location.replace("/logs.html");
     } else {
       alert("No backup found!");
     }
