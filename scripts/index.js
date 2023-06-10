@@ -43,5 +43,5 @@ function submit() {
 
   document.getElementById("text").value = "";
 
-  location.replace("/logs.html");
+  location.replace("/logs");
 }
