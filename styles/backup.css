@@ -34,8 +34,14 @@ main {
   cursor: pointer;
 }
 
+.backup:hover, .restore:hover {
+  background: palevioletred;
+  color: white;
+}
+
 hr {
   border: 1px solid black;
+  margin-top: 1rem;
 }
 
 input[type="file"] {
