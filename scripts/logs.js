@@ -58,6 +58,8 @@ if (data.length > 0) {
   });
 }
 
+document.getElementById("date").value = `${yyyy}-${mm}-${dd}`;
+
 function filter(date) {
   document.querySelector(".filtered-log").innerHTML = "";
   document.querySelector(".alert").style.display = "none";

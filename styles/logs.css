@@ -58,6 +58,10 @@ h1 a {
   color: palevioletred;
 }
 
+.input-container {
+  max-height: 30px;
+}
+
 input,
 button {
   padding: 0px 4px;
@@ -68,6 +72,11 @@ button {
   background: white;
   color: black;
   -webkit-text-fill-color: color;
+}
+
+input[type="date"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 hr {
