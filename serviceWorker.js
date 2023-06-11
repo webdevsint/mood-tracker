@@ -1,4 +1,4 @@
-const cacheName = "moodtracker-1.2";
+const cacheName = "moodtracker-1.3";
 
 const assets = [
   "./",
