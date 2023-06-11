@@ -7,6 +7,7 @@
     "name": "Mood Tracker",
     "short_name": "Mood Tracker",
     "description": "A local storage based mood tracker app.",
+    "version": "1.2",
     "icons": [
         {
             "src": "./icons/icon-192x192.png",
