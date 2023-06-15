@@ -34,7 +34,8 @@ main {
   cursor: pointer;
 }
 
-.backup:hover, .restore:hover {
+.backup:hover,
+.restore:hover {
   background: palevioletred;
   color: white;
 }
@@ -46,4 +47,22 @@ hr {
 
 input[type="file"] {
   display: none;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark .backup,
+.dark .restore {
+  border: 2px solid white;
+}
+
+.dark hr {
+  border: 1px solid white;
 }

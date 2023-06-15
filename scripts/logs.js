@@ -106,3 +106,12 @@ function filter(date) {
     }
   }
 }
+
+const getPreferredScheme = () =>
+  window?.matchMedia?.("(prefers-color-scheme:dark)")?.matches
+    ? "dark"
+    : "light";
+
+if (getPreferredScheme() === "dark") {
+  document.querySelector("body").className = "dark";
+}

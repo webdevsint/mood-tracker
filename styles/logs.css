@@ -82,3 +82,38 @@ input[type="date"] {
 hr {
   border: 1px solid black;
 }
+
+.dark {
+  background: black;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark .alert {
+  background: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.dark .alert a {
+  color: palevioletred;
+}
+
+.dark hr {
+  border: 1px solid white;
+}
+
+.dark .log {
+  color: white;
+  border: 2px solid white;
+}
+
+.dark input,
+.dark button {
+  background: black;
+  color: white;
+  border: 2px solid white;
+}
