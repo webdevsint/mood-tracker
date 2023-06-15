@@ -1,4 +1,4 @@
-const cacheName = "moodtracker_15_6_23";
+const cacheName = "moodtracker_15_6_23_v2";
 
 const assets = [
   "./",
@@ -15,7 +15,6 @@ const assets = [
   "./manifest.json",
 ];
 
-// install event
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
@@ -24,7 +23,6 @@ self.addEventListener("install", (e) => {
   );
 });
 
-// activate event
 self.addEventListener("activate", (e) => {
   self.skipWaiting();
 

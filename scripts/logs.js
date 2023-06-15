@@ -115,3 +115,7 @@ const getPreferredScheme = () =>
 if (getPreferredScheme() === "dark") {
   document.querySelector("body").className = "dark";
 }
+
+document.getElementById("date").onclick = () => {
+  document.getElementById("date").showPicker();
+};
